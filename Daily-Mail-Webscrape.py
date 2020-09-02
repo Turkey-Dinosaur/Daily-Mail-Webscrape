@@ -16,7 +16,7 @@ uClient.close()
 page_soup = soup(page_html, 'lxml')
 
 #Search for a keyword in an article
-keyword = "commute"
+keyword = "bronze"
 
 #Grabs each article
 main_containers = page_soup.findAll("div", {"class":"article article-tri-headline"})
@@ -38,21 +38,21 @@ for contain in main_containers:
 		print("\n")
 
 		#Sends article URL and title to email
-		msg = MIMEMultipart()
-		msg['From'] = 'ashleyc13@hotmail.co.uk'
-		msg['To'] = 'ashleyc13@hotmail.co.uk'
-		msg['Subject'] = keyword + ' article found!'
-		password = 'kuzuZUD3'
-
-		body = url
-		msg.attach(MIMEText(body, 'html'))
-		print(msg)
-
-		server = smtplib.SMTP("smtp-mail.outlook.com")
-		server.starttls()
-		server.login(msg['From'], password)
-		server.sendmail(msg['From'], msg['To'], msg.as_string())
-		server.quit()
+		# msg = MIMEMultipart()
+		# msg['From'] = 'ashleyc13@hotmail.co.uk'
+		# msg['To'] = 'ashleyc13@hotmail.co.uk'
+		# msg['Subject'] = keyword + ' article found!'
+		# password = 'kuzuZUD3'
+        #
+		# body = url
+		# msg.attach(MIMEText(body, 'html'))
+		# print(msg)
+        #
+		# server = smtplib.SMTP("smtp-mail.outlook.com")
+		# server.starttls()
+		# server.login(msg['From'], password)
+		# server.sendmail(msg['From'], msg['To'], msg.as_string())
+		# server.quit()
 
 
 for contain in small_containers:
@@ -70,18 +70,18 @@ for contain in small_containers:
 		print("\n")
 
 		#Sends article URL and title to email
-		msg = MIMEMultipart()
-		msg['From'] = 'ashleyc13@hotmail.co.uk'
-		msg['To'] = 'ashleyc13@hotmail.co.uk'
-		msg['Subject'] = keyword + ' article found!'
-		password = 'kuzuZUD3'
-
-		body = url
-		msg.attach(MIMEText(body, 'html'))
-		print(msg)
-
-		server = smtplib.SMTP("smtp-mail.outlook.com")
-		server.starttls()
-		server.login(msg['From'], password)
-		server.sendmail(msg['From'], msg['To'], msg.as_string())
-		server.quit()
+#		msg = MIMEMultipart()
+#		msg['From'] = 'ashleyc13@hotmail.co.uk'
+		# msg['To'] = 'ashleyc13@hotmail.co.uk'
+		# msg['Subject'] = keyword + ' article found!'
+		# password = 'kuzuZUD3'
+        #
+		# body = url
+		# msg.attach(MIMEText(body, 'html'))
+		# print(msg)
+        #
+		# server = smtplib.SMTP("smtp-mail.outlook.com")
+		# server.starttls()
+		# server.login(msg['From'], password)
+		# server.sendmail(msg['From'], msg['To'], msg.as_string())
+		# server.quit()
